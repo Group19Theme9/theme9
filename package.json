@@ -11,5 +11,8 @@
   },
   "devDependencies": {
     "astro": "^4.16.12"
+  },
+  "dependencies": {
+    "motion": "^11.11.17"
   }
 }
