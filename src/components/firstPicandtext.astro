@@ -1,17 +1,30 @@
+<div class="first">
 <img src="/public/img/firstpic.webp" alt="Glade børn">
-<h1>Et magisk øjeblik væk fra hverdagen</h1>
+<h1>Et magisk øjeblik væk fra<br> hverdagen</h1>
+</div>
 <style>
-.FirstPic {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+
+.first {
+    position: relative;
+    text-align: center;
 }
 img {
-   grid-column: 1 / 4;
    background-position: center;
    width: 100%;
 }
 h1 {
+position: absolute;
+top: 62%;
+left: 30%;
 text-align: center;
 z-index: 1;
+display: inline-block;
+color: white;
+background-color: #29418A;
+opacity: 60%;
+padding: 5px 50px;
+border-radius: 5px;
 }
+
+
 </style>
