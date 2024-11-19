@@ -1,0 +1,89 @@
+<section class="grid_1-1" >
+    <div class="billede">
+        <img src="/public/img/statetisk_billede3.webp" alt="billede af et sygt barn med en tryllekunstner">
+    </div>
+    <div>
+        <h1>800.000</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi earum laudantium optio minima, aut odit, ea praesentium corrupti illo minus unde, asperiores at rerum temporibus.
+        </p>
+    </div>
+
+</section>
+
+<style>
+    /* Basislayout */
+    section.grid_1-1 {
+        margin-top: 200px;
+    }
+
+    .grid_1-1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        padding: 50px 20px;
+    }
+
+    h1 {
+        color: #1A3B8E;
+        font-size: 90px;
+        text-align: center;
+    }
+
+    p {
+        font-family: "Open Sans", sans-serif;
+        font-size: 18px;
+        font-style: normal;
+        max-width: 525px;
+        margin: 0 auto;
+        line-height: 1.5;
+    }
+
+    /* Responsivt layout */
+    @media (max-width: 1024px) {
+        .grid_1-1 {
+            grid-template-columns: 1fr; /* Skifter til én kolonne */
+            gap: 30px;
+            padding: 40px 15px; /* Mindre padding */
+        }
+
+        h1 {
+            font-size: 70px; /* Mindre fontstørrelse */
+        }
+
+        p {
+            font-size: 16px; /* Mindre tekst */
+            max-width: 100%; /* Tillader teksten at fylde mere */
+        }
+    }
+
+    @media (max-width: 768px) {
+        .grid_1-1 {
+            padding: 30px 10px; /* Endnu mindre padding */
+        }
+
+        h1 {
+            font-size: 50px;
+        }
+
+        p {
+            font-size: 15px;
+            line-height: 1.4; /* Mindre linjeafstand */
+        }
+    }
+
+    @media (max-width: 480px) {
+        h1 {
+            font-size: 40px; /* Passer til små skærme */
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        .billede img {
+            width: 100%; /* Billedet tilpasser sig skærmen */
+            height: auto;
+        }
+    }
+</style>
