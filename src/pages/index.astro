@@ -1,40 +1,36 @@
 ---
-import "../styles/global.css"
-import MainLayout from "../layouts/MainLayout.astro"
-import FirstPicandtext from "../components/firstPicandtext.astro"
-import Donerknap from "../components/donerknap.astro"
-import Lottiefile from "../components/lottiefile.astro"
-import Info from "../components/info.astro"
-import SecondPic from "../components/SecondPic.astro"
-import Video from "../components/Video.astro"
-import Ballondel from "../components/Ballondel.astro"
-import Lottifileslut from "../components/Lottifileslut.astro"
-import Headermedtryllestav from "../components/Headermedtryllestav.astro"
+import "../styles/global.css";
+import MainLayout from "../layouts/MainLayout.astro";
+import FirstPicandtext from "../components/firstPicandtext.astro";
+import Donerknap from "../components/donerknap.astro";
+import Lottiefile from "../components/lottiefile.astro";
+import Infobox from "../components/Infobox.astro";
+import SecondPic from "../components/SecondPic.astro";
+import Video from "../components/Video.astro";
+import Ballondel from "../components/Ballondel.astro";
+import Lottifileslut from "../components/Lottifileslut.astro";
+import Headermedtryllestav from "../components/Headermedtryllestav.astro";
 ---
 
 <MainLayout>
-<FirstPicandtext></FirstPicandtext>	
-<Donerknap></Donerknap>
-<Lottiefile></Lottiefile>
-<SecondPic></SecondPic>
-<Info></Info>
-<Ballondel></Ballondel>
-<Video></Video>
-<Headermedtryllestav></Headermedtryllestav>
-<Lottifileslut></Lottifileslut>
+  <FirstPicandtext />
+  <Donerknap />
+  <Lottiefile />
+  <SecondPic />
+  <Infobox />
+  <Ballondel />
+  <Video />
+  <Headermedtryllestav />
+  <Lottifileslut />
 </MainLayout>
 
 <script>
+  window.addEventListener("scroll", onScroll);
 
-window.addEventListener("scroll", onScroll);
-
-function onScroll() {
-  let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-  let height =
-    document.documentElement.scrollHeight -
-    document.documentElement.clientHeight;
-  let scrolled = (winScroll / height) * 100;
-  document.getElementById("myBar").style.width = scrolled + "%";
-}
-
+  function onScroll() {
+    let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    let scrolled = (winScroll / height) * 100;
+    document.getElementById("myBar").style.width = scrolled + "%";
+  }
 </script>

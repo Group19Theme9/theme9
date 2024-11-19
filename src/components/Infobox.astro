@@ -1,0 +1,75 @@
+<div class="infobox_overskrift">
+  <img src="/public/img/image10.svg" alt="overskrift" />
+</div>
+<div class="infobox">
+  <img src="/public/img/tekstboks1.svg" alt="infobox" />
+  <div class="infotext">
+    <p>
+      I Magiske Makkere er det formålet, at vores magikere er til stede på alle landets børneafdelinger <br />og skaber magi og glæde, så børnene bliver opslugt at de spændende magiske tricks <br /> og bliver underholdt og får en ægte pause
+      <br />
+      fra sygdom, kedelig ventetid, frygt for ubehag eller sorg.
+    </p>
+  </div>
+  <div class="wand"><img src="/public/img/tryllestav1.svg" alt="tryllestav" /></div>
+</div>
+<style>
+  .infobox_overskrift img {
+    display: inline-block;
+    height: auto;
+    max-width: 100%;
+    text-align: center;
+    margin: 50vh;
+  }
+
+  .infobox_overskrift {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .infobox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1.5fr;
+    padding-left: 15rem;
+  }
+
+  .infobox img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .infotext {
+    position: absolute;
+    color: white;
+    z-index: 1;
+    text-align: center;
+    font-size: 1.2rem;
+    box-sizing: border-box;
+    padding-left: 1%;
+  }
+
+  .wand {
+    position: absolute;
+    padding-left: 55%;
+  }
+
+  @media (max-width: 480px) {
+    .infotext {
+      font-size: 0.7rem;
+      max-width: 70ch;
+    }
+
+    .infobox {
+      padding-left: 0%;
+    }
+
+    .wand {
+      height: auto;
+    }
+  }
+</style>
