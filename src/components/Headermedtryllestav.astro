@@ -1,22 +1,42 @@
 <div class="header">
-    <img src="/public/img/header2.svg" alt="overskrift">
+    <img class="tekst" src="/public/img/header2.svg" alt="overskrift">
+    <img class="stjerner" src="/public/img/stjerner.svg" alt="stjerner">
+    <img class="tryllestav" src="/public/img/tryllestav.svg" alt="tryllestav">
     </div>
     <style>
     
-    .header img {
-        display: inline-block;
-        height: auto;
-        max-width: 100%;
-        text-align: center;
-        margin: auto;
-    }
-    
-    .header {
-        margin-top: 200px; 
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
+.header {
+    display:grid;
+    grid-template-columns: 3fr 0.25fr 0.5fr;
+    grid-template-rows: 0.5fr 0.5fr 0.25fr;
+    margin-top: 50vh;
+    position: relative;
+}
+.tekst {
+   grid-column: 1 / 3; 
+   grid-row: 1 / 3;
+   max-width: 100%;
+   position: relative;
+   z-index: 0;
+}
+.stjerner {
+    grid-column: 2 / 4;
+    max-width: 100%;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    animation: fadeInOut 2s ease-in-out infinite;
+}
+.tryllestav {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    position: relative;
+    z-index: 0;
+}
+
     </style>
+   <script>
+
+  </script>
+  
