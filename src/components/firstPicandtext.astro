@@ -1,12 +1,14 @@
 <div class="first">
-<!-- <img src="/public/img/firstpic.webp" alt="Glade børn"> -->
-<h1>ET MAGISK ØJEBLIK VÆK FRA<br> HVERDAGEN</h1>
+
+<h1 class="scrolltext">ET MAGISK ØJEBLIK VÆK FRA<br> HVERDAGEN</h1>
+
 </div>
 <style>
 
 .first {
     background-image: url(/public/img/firstpic.webp);
     top: 0;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,28 +18,24 @@
     height: 100vh;
     background-position: fixed;
 }
-.first h1 {
+.scrolltext{
 color: white!important;
-top: 70%;
-left: 30%;
-transform: translate(-18%, -0%);
 text-align: center;
-z-index: 1;
 display: inline-block;
 font-size: calc(16px + 2vw);
 background-color: rgba(41, 65, 138, 0.6);
 padding: 0.5em 1em;
 border-radius: 5px; 
 box-sizing: border-box; 
-width: 65%;
+width: 70%;
+top: -30%;
+position: relative;
+z-index: 1;
 }
-
-
 
 </style>
 
 <script>
-
 
 
 </script>
