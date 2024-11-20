@@ -1,8 +1,15 @@
+---
+import image10 from "../../public/img/image10.svg";
+import tekstboks1 from "../../public/img/tekstboks1.svg";
+import tryllestav1 from "../../public/img/tryllestav1.svg";
+import { Image } from "astro:assets";
+---
+
 <div class="infobox_overskrift">
-  <img src="/public/img/image10.svg" alt="overskrift" />
+  <Image src={image10} alt="overskrift" />
 </div>
 <div class="infobox">
-  <img src="/public/img/tekstboks1.svg" alt="infobox" />
+  <Image src={tekstboks1} alt="tekstboks" />
   <div class="infotext">
     <p>
       I Magiske Makkere er det formålet, at vores magikere er til stede på alle landets børneafdelinger <br />og skaber magi og glæde, så børnene bliver opslugt at de spændende magiske tricks <br /> og bliver underholdt og får en ægte pause
@@ -10,12 +17,14 @@
       fra sygdom, kedelig ventetid, frygt for ubehag eller sorg.
     </p>
   </div>
-  <div class="wand"><img src="/public/img/tryllestav1.svg" alt="tryllestav" /></div>
+  <div class="wand">
+    <Image src={tryllestav1} alt="tryllestav" />
+  </div>
 </div>
 
 <script>
   import { animate, scroll, inView } from "motion";
-  animate("infobox_overskrift img", { x: [0, 100] }, { ease: "easeIn" });
+  animate(".infobox_overskrift", { x: [0, 100] }, { ease: "easeIn" });
 </script>
 <style>
   .infobox_overskrift img {
