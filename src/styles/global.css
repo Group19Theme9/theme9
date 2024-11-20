@@ -14,7 +14,7 @@
 
 .progress-bar {
   height: 8px;
-  background: hotpink;
+  background: #ff5178;
   width: 0%;
   z-index: 2;
 }

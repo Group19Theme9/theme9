@@ -1,26 +1,24 @@
 <div class="first">
-<img src="/public/img/firstpic.webp" alt="Glade børn">
+<!-- <img src="/public/img/firstpic.webp" alt="Glade børn"> -->
 <h1>ET MAGISK ØJEBLIK VÆK FRA<br> HVERDAGEN</h1>
 </div>
 <style>
 
 .first {
-    position: relative;
+    background-image: url(/public/img/firstpic.webp);
+    top: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    overflow: hidden;
+    background-size: cover;
+    height: 100vh;
+    background-position: fixed;
 }
-img {
-width: 100%;
-height: 100%;
-object-fit: cover;
-}
-
 .first h1 {
 color: white!important;
-position: absolute;
-top: 62%;
+top: 70%;
 left: 30%;
 transform: translate(-18%, -0%);
 text-align: center;
@@ -37,3 +35,18 @@ width: 65%;
 
 
 </style>
+
+<script>
+
+import {
+  animate, inView, scroll
+} from "motion";
+
+animate("h1", {opacity: [0,1]}, {duration: 2});
+
+scroll(animate("h1", {opacity: [1, 0]}), {
+    target: document.querySelector("h1"),
+    offset: ["start start", "end start"]
+})
+
+</script>
