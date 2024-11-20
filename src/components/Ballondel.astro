@@ -1,77 +1,76 @@
-
-    <section class="fsection">
-    <img class="pink" src="public/img/pinkballon.svg" alt="Ballon">
-    <img class="blue" src="public/img/blueballon.svg" alt="Ballon">
-    <p class="firstp">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.” </p>
+<section class="fsection">
+  <img class="pink" src="public/img/pinkballon.svg" alt="Ballon" />
+  <img class="blue" src="public/img/blueballon.svg" alt="Ballon" />
+  <p class="firstp">
+    “Da jeg var 7 år, blev jeg selv ved et tilfælde draget ind i det magiske univers, og jeg har lige siden elsket at lave magi for store og små. Ingen børn har fortjent at ligge i en hospitalsseng og få frarøvet en magisk barndom.”
+    <br /> - Henrik Svanekiær, der er magiker og tankelæser
+  </p>
 </section>
 <section class="ssection">
-    <p class="secondp">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.” </p>
-    <img class="babypink" src="public/img/babypinkballon.svg" alt="Ballon">
-    <img class="green" src="public/img/greenballon.svg" alt="Ballon">
+  <p class="secondp">
+    “Vi brugte det meste af ferien på Herlev hospital med Eske. Men i dag kom en tryllekunstner ind på hans stue fra Kids Aid, og det er noget af det bedste, der er sket for Eske i denne ferie. Han grinede mere end han har gjort længe.
+    Tusind tak for jeres gode arbejde!” <br /> - Mor til Eske på 8 år
+  </p>
+  <img class="babypink" src="public/img/babypinkballon.svg" alt="Ballon" />
+  <img class="green" src="public/img/greenballon.svg" alt="Ballon" />
 </section>
 <style>
-
-.fsection {
+  .fsection {
     display: grid;
     grid-template-columns: 0.5fr 0.5fr 2fr;
     grid-template-rows: 1fr 1fr 1fr;
     margin-top: 50vh;
-}
-.pink {
-grid-column: 1;
-grid-row: 2 / 4;
-}
-.blue {
-grid-column: 2;
-grid-row: 1 / 3;
-}
-.firstp {
+  }
+  .pink {
+    grid-column: 1;
+    grid-row: 2 / 4;
+  }
+  .blue {
+    grid-column: 2;
+    grid-row: 1 / 3;
+  }
+  .firstp {
     grid-column: 3 / 4;
     grid-row: 2;
-    color: #1A3B8E;
+    color: #1a3b8e;
     font-style: italic;
     font-size: 1.5rem;
     padding-right: 5%;
-}
+  }
 
-.ssection {
+  .ssection {
     display: grid;
     grid-template-columns: 2fr 0.5fr 0.5fr;
     grid-template-rows: 1fr 1fr 1fr;
     margin-top: 25vh;
-}
+  }
 
-.secondp {
-   grid-column: 1 / 2;
-   grid-row: 2 / 3; 
-   color: #1A3B8E;
-  font-style: italic;
-  font-size: 1.5rem;
+  .secondp {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    color: #1a3b8e;
+    font-style: italic;
+    font-size: 1.5rem;
     padding-left: 5%;
-}
+  }
 
-.babypink  {
+  .babypink {
     grid-column: 2 / 3;
     grid-row: 1 / 3;
-}
+  }
 
-.green {
+  .green {
     grid-column: 3 / 4;
     grid-row: 2 / 4;
-}
-
+  }
 </style>
 
 <script>
-import {
-  animate,
-  scroll,
-} from "motion";
+  import { animate, scroll } from "motion";
 
-document.querySelectorAll(".pink, .blue, .babypink, .green").forEach((balloon) => {
-  scroll(animate(balloon, { y: [-300, 300] }, { ease: "linear" }), {
-    target: balloon,
+  document.querySelectorAll(".pink, .blue, .babypink, .green").forEach((balloon) => {
+    scroll(animate(balloon, { y: [-300, 300] }, { ease: "linear" }), {
+      target: balloon,
+    });
   });
-});
-
 </script>
