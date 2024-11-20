@@ -4,10 +4,7 @@ import { Image } from "astro:assets";
 ---
 
 <div class="container">
-  <!-- <img src="public/img/secondPic.webp" alt="En pige"> -->
-
   <Image src={secondPic} alt="en pige" />
-  <img src="../../public/img/secondPic.webp" alt="En pige" />
   <h2>“SIKKE EN GAVE, AT SE MERLES ØJNE<br /> STRÅLE, OG SE HENDES LILLE<br /> "RYGSÆK" BLIVE FYLDT MED<br /> FULDSTÆNDIG FANTASTISKE MINDER"</h2>
 </div>
 
@@ -20,8 +17,8 @@ import { Image } from "astro:assets";
     height: 100vh;
   }
 
-  img {
-    width: 100%;
+  Image {
+    max-width: 100%;
     height: 100%;
     object-fit: cover;
     margin-top: 50vh;

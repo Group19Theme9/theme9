@@ -1,5 +1,14 @@
+---
+import pinkBallon from "../../public/img/pinkballon.svg";
+import blueBallon from "../../public/img/blueballon.svg";
+import babypinkBallon from "../../public/img/babypinkballon.svg";
+import greenBallon from "../../public/img/greenballon.svg";
+import { Image } from "astro:assets";
+---
+
 <section class="fsection">
-  <img class="pink" src="public/img/pinkballon.svg" alt="Ballon" />
+  <Image src={pinkBallon} alt="ballon" />
+  <Image src={blueBallon} alt="ballon" />
   <img class="blue" src="public/img/blueballon.svg" alt="Ballon" />
   <p class="firstp">
     “Da jeg var 7 år, blev jeg selv ved et tilfælde draget ind i det magiske univers, og jeg har lige siden elsket at lave magi for store og små. Ingen børn har fortjent at ligge i en hospitalsseng og få frarøvet en magisk barndom.”
