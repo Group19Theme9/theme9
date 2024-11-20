@@ -1,7 +1,8 @@
 ---
 import image10 from "../../public/img/image10.svg";
 import tekstboks1 from "../../public/img/tekstboks1.svg";
-import tryllestav1 from "../../public/img/tryllestav1.svg";
+import stjerner from "../../public/img/stjerner.svg";
+import tryllestav from "../../public/img/tryllestav.svg";
 import { Image } from "astro:assets";
 ---
 
@@ -9,25 +10,33 @@ import { Image } from "astro:assets";
   <Image src={image10} alt="overskrift" />
 </div>
 <div class="infobox">
-  <Image src={tekstboks1} alt="tekstboks" />
+  <Image class="tekstboks1" src={tekstboks1} alt="tekstboks" />
   <div class="infotext">
     <p>
-      I Magiske Makkere er det formålet, at vores magikere er til stede på alle landets børneafdelinger <br />og skaber magi og glæde, så børnene bliver opslugt at de spændende magiske tricks <br /> og bliver underholdt og får en ægte pause
-      <br />
-      fra sygdom, kedelig ventetid, frygt for ubehag eller sorg.
+      I Magiske Makkere er det formålet, at vores magikere er til stede på alle <br/>landets børneafdelinger og skaber magi
+       og glæde, så børnene  <br />bliver opslugt at de spændende magiske tricks og bliver <br /> underholdt og får en ægte pause
+      
+      fra sygdom, kedelig ventetid, <br />frygt for ubehag eller sorg.
     </p>
   </div>
-  <div class="wand">
-    <Image src={tryllestav1} alt="tryllestav" />
-  </div>
+
+    <Image class="tryllestav" src={tryllestav} alt="tryllestav" />
+    <Image class="stjerner" src={stjerner} alt="stjerner" />
+  
 </div>
 
 <script>
   import { animate, scroll, inView } from "motion";
+
   scroll(animate(".infobox_overskrift", { opacity: [0, 1] }), {
     target: document.querySelector(".infobox_overskrift"),
     offset: ["start center", "end center"],
   });
+
+  scroll(animate(".stjerner", {rotate: [0, 360], opacity: [1,0,1,1,0]}, {ease: "linear"}),{
+    target:document.querySelector(".stjerner"),
+    offset:["start end", "end start"],
+  })
 </script>
 <style>
   .infobox_overskrift img {
@@ -45,35 +54,39 @@ import { Image } from "astro:assets";
     align-items: center;
   }
 
+
   .infobox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50vh;
     display: grid;
-    grid-template-columns: 1.5fr;
-    padding-left: 15rem;
+    grid-template-columns: 0.5fr 1fr 0.5fr 0.25 0.25 0.5fr;
+    grid-template-rows: 0.5fr 0.5fr 1fr 1fr;
   }
 
-  .infobox img {
-    max-width: 100%;
-    height: auto;
+  .tekstboks1{
+    grid-column: 2 / 6;
+    grid-row: 1 / 5;
   }
 
   .infotext {
-    position: absolute;
-    color: white;
-    z-index: 1;
-    text-align: center;
-    font-size: 1.2rem;
-    box-sizing: border-box;
-    padding-left: 1%;
+   grid-column: 2 / 6;
+   grid-row: 3 / 5;
+   padding-left: 10vw;
+   color: #ECF5FC;
   }
 
-  .wand {
+.tryllestav {
+  grid-column: 5 / 6;
+  grid-row: 2 / 4;
+}
+
+.stjerner {
+grid-column: 4 / 6;
+grid-row: 1 / 2;
+}
+
+  /* .wand {
     position: absolute;
     padding-left: 55%;
-  }
+  } */
 
   @media (max-width: 480px) {
     .infotext {
