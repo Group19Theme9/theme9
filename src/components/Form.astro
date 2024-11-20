@@ -1,0 +1,63 @@
+<h2>Donér penge til Magiske Makkere her!</h2>
+<form action="/submit" method="post">
+  <!-- navn -->
+  <label for="name">Navn:</label>
+  <input type="text" id="name" name="name" placeholder="Fulde navn" required />
+  <!-- kommentar -->
+  <label for="comment">Hvor meget vil du donere?:</label>
+  <textarea id="comment" name="comment" rows="5" placeholder="" required></textarea>
+  <!-- telefon nummer -->
+  <label for="phone">Telefonnummer:</label>
+  <input type="tel" id="phone" name="phone" placeholder="Telefonnummer" pattern="[0-9]{10}" required />
+  <!-- Submit Button -->
+  <button type="submit">Doner</button>
+</form>
+
+<style>
+  h2 {
+    text-align: center;
+    margin-bottom: 3vh;
+    color: #1a3b8e;
+  }
+  body {
+    font-family: Arial, sans-serif;
+  }
+
+  form {
+    max-width: 600px;
+    height: 550px;
+    margin: 0 auto;
+    padding: 90px;
+    border-radius: 8px;
+    background-image: url(img/form.svg);
+    background-size: cover;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  input,
+  textarea,
+  button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: #fef0f2;
+    border: 1px solid #fef0f2;
+    border-radius: 6px;
+  }
+
+  button {
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+  }
+</style>
