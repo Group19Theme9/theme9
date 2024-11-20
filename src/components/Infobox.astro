@@ -24,7 +24,10 @@ import { Image } from "astro:assets";
 
 <script>
   import { animate, scroll, inView } from "motion";
-  animate(".infobox_overskrift", { x: [0, 100] }, { ease: "easeIn" });
+  scroll(animate(".infobox_overskrift", { opacity: [0, 1] }), {
+    target: document.querySelector(".infobox_overskrift"),
+    offset: ["start center", "end center"],
+  });
 </script>
 <style>
   .infobox_overskrift img {
