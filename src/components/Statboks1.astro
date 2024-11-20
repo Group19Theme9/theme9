@@ -1,96 +1,90 @@
 <section class="statboks1">
-    <div class="billede">
-        <img src="/public/img/statetisk_billede1.webp" alt="billede med tryllekunster og et barn">
-    </div>
-    <div>
-        <h1>82%</h1>  
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi earum laudantium optio minima, aut odit, ea praesentium corrupti illo minus unde, asperiores at rerum temporibus.
-        </p>
-    </div>
+  <div class="billede">
+    <img src="/public/img/statetisk_billede1.webp" alt="billede med tryllekunster og et barn" />
+  </div>
+  <div>
+    <h1>1.000.000</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi earum laudantium optio minima, aut odit, ea praesentium corrupti illo minus unde, asperiores at rerum temporibus.</p>
+  </div>
 </section>
 <script>
+  import { animate, scroll, inView } from "motion";
 
-    import {animate, scroll, inView} from "motion";
-    
-    scroll(animate(".statboks1", { scale: [0.5, 1, 1, 0.5]}, ), {target: document.querySelector(".statboks1"), 
-    offset: ["start end", "end end", "start start", "end start"]});
-    
-    </script>
+  scroll(animate(".statboks1", { scale: [0.5, 1, 1, 0.5] }), { target: document.querySelector(".statboks1"), offset: ["start end", "end end", "start start", "end start"] });
+</script>
 <style>
-   
-    .statboks1 {
-        margin-top: 200px;
-    }
+  .statboks1 {
+    margin-top: 200px;
+  }
 
+  .statboks1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 50px 20px;
+  }
+
+  h1 {
+    color: #1a3b8e;
+    font-size: 90px;
+    text-align: center;
+    opacity: 1;
+  }
+
+  p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    max-width: 525px;
+    margin: 0 auto;
+    line-height: 1.5;
+  }
+
+  @media (max-width: 1024px) {
     .statboks1 {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 20px;
-        padding: 50px 20px;
+      grid-template-columns: 1fr;
+      gap: 30px;
+      padding: 40px 15px;
     }
 
     h1 {
-        color: #1A3B8E;
-        font-size: 90px;
-        text-align: center;
-        opacity: 1;
+      font-size: 70px;
     }
 
     p {
-        font-family: "Open Sans", sans-serif;
-        font-size: 18px;
-        font-style: normal;
-        max-width: 525px;
-        margin: 0 auto;
-        line-height: 1.5;
+      font-size: 16px;
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .statboks1 {
+      padding: 30px 10px;
     }
 
-   
-    @media (max-width: 1024px) {
-        .statboks1 {
-            grid-template-columns: 1fr; 
-            gap: 30px;
-            padding: 40px 15px;
-        }
-
-        h1 {
-            font-size: 70px; 
-        }
-
-        p {
-            font-size: 16px; 
-            max-width: 100%; 
-        }
+    h1 {
+      font-size: 50px;
     }
 
-    @media (max-width: 768px) {
-        .statboks1 {
-            padding: 30px 10px; 
-        }
+    p {
+      font-size: 15px;
+      line-height: 1.4; /* Mindre linjeafstand */
+    }
+  }
 
-        h1 {
-            font-size: 50px;
-        }
-
-        p {
-            font-size: 15px;
-            line-height: 1.4; /* Mindre linjeafstand */
-        }
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 40px; /* Passer til små skærme */
     }
 
-    @media (max-width: 480px) {
-        h1 {
-            font-size: 40px; /* Passer til små skærme */
-        }
-
-        p {
-            font-size: 14px;
-            line-height: 1.4;
-        }
-
-        .billede img {
-            width: 100%; /* Billedet tilpasser sig skærmen */
-            height: auto;
-        }
+    p {
+      font-size: 14px;
+      line-height: 1.4;
     }
+
+    .billede img {
+      width: 100%; /* Billedet tilpasser sig skærmen */
+      height: auto;
+    }
+  }
 </style>
