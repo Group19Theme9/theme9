@@ -12,6 +12,11 @@
   </div>
   <div class="wand"><img src="/public/img/tryllestav1.svg" alt="tryllestav" /></div>
 </div>
+
+<script>
+  import { animate, scroll, inView } from "motion";
+  animate("infobox_overskrift img", { x: [0, 100] }, { ease: "easeIn" });
+</script>
 <style>
   .infobox_overskrift img {
     display: inline-block;
