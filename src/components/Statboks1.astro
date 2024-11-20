@@ -1,21 +1,28 @@
-<section class="grid_1-1">
+<section class="statboks1">
     <div class="billede">
         <img src="/public/img/statetisk_billede1.webp" alt="billede med tryllekunster og et barn">
     </div>
     <div>
-        <h1>82%</h1>
+        <h1>82%</h1>  
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi earum laudantium optio minima, aut odit, ea praesentium corrupti illo minus unde, asperiores at rerum temporibus.
         </p>
     </div>
 </section>
+<script>
 
+    import {animate, scroll, inView} from "motion";
+    
+    scroll(animate(".statboks1", { scale: [0.5, 1, 1, 0.5]}, ), {target: document.querySelector(".statboks1"), 
+    offset: ["start end", "end end", "start start", "end start"]});
+    
+    </script>
 <style>
-    /* Basislayout */
-    section.grid_1-1 {
+   
+    .statboks1 {
         margin-top: 200px;
     }
 
-    .grid_1-1 {
+    .statboks1 {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 20px;
@@ -26,6 +33,7 @@
         color: #1A3B8E;
         font-size: 90px;
         text-align: center;
+        opacity: 1;
     }
 
     p {
@@ -37,27 +45,27 @@
         line-height: 1.5;
     }
 
-    /* Responsivt layout */
+   
     @media (max-width: 1024px) {
-        .grid_1-1 {
-            grid-template-columns: 1fr; /* Skifter til én kolonne */
+        .statboks1 {
+            grid-template-columns: 1fr; 
             gap: 30px;
-            padding: 40px 15px; /* Mindre padding */
+            padding: 40px 15px;
         }
 
         h1 {
-            font-size: 70px; /* Mindre fontstørrelse */
+            font-size: 70px; 
         }
 
         p {
-            font-size: 16px; /* Mindre tekst */
-            max-width: 100%; /* Tillader teksten at fylde mere */
+            font-size: 16px; 
+            max-width: 100%; 
         }
     }
 
     @media (max-width: 768px) {
-        .grid_1-1 {
-            padding: 30px 10px; /* Endnu mindre padding */
+        .statboks1 {
+            padding: 30px 10px; 
         }
 
         h1 {

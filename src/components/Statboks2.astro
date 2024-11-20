@@ -9,7 +9,14 @@
     </div>
 
 </section>
+<script>
 
+    import {animate, scroll, inView} from "motion";
+    
+    scroll(animate(".grid_1-1", { scale: [0.5, 1, 1, 0.5]}), {target: document.querySelector(".grid_1-1"), 
+    offset: ["start end", "end end", "start start", "end start"]});
+    
+    </script>
 <style>
     /* Basislayout */
     section.grid_1-1 {
@@ -27,6 +34,7 @@
         color: #1A3B8E;
         font-size: 90px;
         text-align: center;
+        z-index: 1;
     }
 
     p {

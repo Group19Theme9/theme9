@@ -38,15 +38,6 @@ width: 65%;
 
 <script>
 
-import {
-  animate, inView, scroll
-} from "motion";
 
-animate("h1", {opacity: [0,1]}, {duration: 2});
-
-scroll(animate("h1", {opacity: [1, 0]}), {
-    target: document.querySelector("h1"),
-    offset: ["start start", "end start"]
-})
 
 </script>

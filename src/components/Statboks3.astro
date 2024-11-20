@@ -1,4 +1,4 @@
-<section class="grid_1-1" >
+<section class="statboks3" >
     <div class="billede">
         <img src="/public/img/statetisk_billede3.webp" alt="billede af et sygt barn med en tryllekunstner">
     </div>
@@ -9,14 +9,21 @@
     </div>
 
 </section>
+<script>
 
+    import {animate, scroll, inView} from "motion";
+    
+    scroll(animate(".statboks3", { scale: [0.5, 1, 1, 0.5]}), {target: document.querySelector(".statboks3"), 
+    offset: ["start end", "end end", "start start", "end start"]});
+    
+    </script>
 <style>
     /* Basislayout */
-    section.grid_1-1 {
+    section.statboks3 {
         margin-top: 200px;
     }
 
-    .grid_1-1 {
+    .statboks3 {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 20px;
@@ -27,6 +34,8 @@
         color: #1A3B8E;
         font-size: 90px;
         text-align: center;
+        visibility: visible;
+        display: block;
     }
 
     p {
@@ -40,7 +49,7 @@
 
     /* Responsivt layout */
     @media (max-width: 1024px) {
-        .grid_1-1 {
+        .statboks3 {
             grid-template-columns: 1fr; /* Skifter til én kolonne */
             gap: 30px;
             padding: 40px 15px; /* Mindre padding */
@@ -57,7 +66,7 @@
     }
 
     @media (max-width: 768px) {
-        .grid_1-1 {
+        .statboks3 {
             padding: 30px 10px; /* Endnu mindre padding */
         }
 
